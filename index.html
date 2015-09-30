@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Night and Day</title>
+        <link rel="stylesheet" href="style.css">
+        <script src= "https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+    </head>
+    
+    <body class="daytime">
+        <div id="orb" class="sun"> 
+        
+            
+        </div> 
+        <button class="btn">click me</button>
+       
+        
+        <script>
+            $(document).ready(function(){
+            //call-back            
+                $("button").on("click", function(){
+                    if ($("body").hasClass("nighttime")){
+                        $("#orb").removeClass("moon");
+                        $("#orb").addClass("sun");
+                        $("body").removeClass("nighttime");
+                        $("body").addClass("daytime");
+                        console.log("it's nigfht changing to day");
+                    }
+                    else{
+
+                        $("body").removeClass("daytime");
+                        $("#orb").removeClass("sun");
+                        $("#orb").addClass("moon");
+                        $("body").addClass("nighttime");
+                        console.log("day changing to night");
+
+
+
+
+                    }  
+
+                });
+            
+            
+            });
+        
+        
+        
+        </script>
+    
+    </body>
+
+
+</html>
